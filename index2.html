@@ -1,0 +1,152 @@
+<!--//With Modal-->
+<!-- index2.html with Modal (You can run it with IMPORT RANGE FUNCTION from spreadsheet file https://youtu.be/LKLIVLha2OI-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>FILE SISWA</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<?!= include('css'); ?>
+  <head>
+<body>
+  	<div class="container">
+            <button id="btn" class="button" style="font-style: initial;font-weight: bold;float: left;color: white; float:left;background-color:navy">TAMBAH DATA</button>
+ 
+			<table id="test" class="table table-striped nowrap" style="width:100%">
+        <!-- atur id tabel agar sesuai dengan js -->
+      </table>
+ </div>
+	</div>
+<?!= include('js'); ?>
+  <style>
+  @charset "utf-8";
+
+*{
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+#blur-bg{
+  width: 100%;
+  min-height: 100%;
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+#form-con{
+  width: 480px;
+  background: white;
+  position: absolute;
+  left: 33%;
+  top: -800px;
+  border-radius: 5px;
+  padding: 20px 30px;
+}
+
+#form-con #heading{
+  width:100%;
+  text-align: right;
+  font-size: 30px;
+  color: #FF4949;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+#form-con #heading span{
+  cursor: pointer;
+}
+
+#form-con label{
+  font-size: 15px;
+}
+
+#form-con  input{
+  width: 100%;
+  height: 35px;
+  margin-bottom: 15px;
+  padding-left: 8px;
+  border-radius: 5px;
+  border:none;
+  box-shadow: 0px 0px 8px #ccc;
+  outline-color: crimson;
+}
+
+#form-con  input[type="submit"]{
+  margin-top: 35px;
+  border:none;
+  background: darkgreen;
+  color: white;
+  cursor: pointer;
+}
+#form-con  input[type="submit"]:hover{
+  opacity: 0.9;
+}
+
+/*Responsive mobile*/
+
+@media only screen and (max-width: 640px){
+  #form-con{
+    width: 90%;
+    left: 5%;
+  }
+}
+
+</style>
+  <header>
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-align-right text-light"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="mr-auto"></div>
+        </div>
+      </nav>
+    </div>
+
+  <div id="blur-bg">
+  <div id="form-con">
+    <form>
+      <div id="heading"style="font-size: 20px;color: blue;">
+        <span>TUGAS FILE SISWA</span>
+      <span id="close-btn"style="font-size: 20px;color: red;">X</span>
+      </div>
+  <iframe src="https://script.google.com/macros/s/AKfycbxLAdHBEpfPtqyy_ZZu1kHKhcx0glhDl1gRfO4wu1JKZwrM0fyf5rX-vwaP5A67Yth8/exec"style="width: 100%;height: 460px;"></iframe>
+</form>
+  </div>
+  </div>
+
+<script>
+  $(document).ready(function(){
+  $("#btn").click(1000,function(){
+    $("#form-con").animate({
+      "top":"16px"
+    },1000);
+    $("#blur-bg").fadeIn(1000);
+    $("#close-btn").click(function(){
+      $("#blur-bg").fadeOut(1000);
+      $("#form-con").animate({
+      "top":"-800px"
+    },1000);
+    });
+  });
+});
+</script>
+
+  </body>
+</html>
